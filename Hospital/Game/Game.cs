@@ -54,8 +54,8 @@ namespace Hospital.Game
 
         public void XmlSerialize()
         {
-            var xml = new XmlSerializer(typeof(int));
-            using var fs = new FileStream("TranslatorArmy.xml", FileMode.OpenOrCreate);
+            var xml = new XmlSerializer(typeof(Doctor));
+            using var fs = new FileStream("Doctors.xml", FileMode.OpenOrCreate);
             xml.Serialize(fs, buildings);
 
             Console.WriteLine("Ready");
